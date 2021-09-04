@@ -15,10 +15,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/scss/app.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {src: '~/plugins/unicons.js', mode: "client"},
+    {src: '~/plugins/swiper.js', mode: "client"}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -50,5 +53,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  server: {     
+    port: 8000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
   }
 }
